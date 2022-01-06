@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class SMSHistory {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int smsLogId;
 
     @Column(name = "mobileNo")
@@ -23,6 +23,7 @@ public class SMSHistory {
     private  String exceptionLog;
 
     public SMSHistory() {
+
     }
 
     public SMSHistory(int smsLogId, String mobileNo, String sentDate, String smsText, String exceptionLog) {

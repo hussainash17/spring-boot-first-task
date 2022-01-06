@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface SMSHistoryRepository extends JpaRepository<SMSHistory, Long> {
     List<SMSHistory> findByMobileNo(String mobileNo);
+    SMSHistory findBySmsLogId(int smsLogId);
 }
